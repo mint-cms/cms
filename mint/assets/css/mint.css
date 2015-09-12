@@ -1,0 +1,162 @@
+/**
+ * mini_blog.css
+ * 
+ * Admin panels styles
+ * 
+ * @author volter9
+ * @package mini_blog
+ */
+
+#mini_panel {
+    background-color: #fff;
+    
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 9002;
+    width: 3em;
+}
+
+#mini_panel ul {
+    list-style: none;
+    
+    margin: 0px;
+    padding: 0px;
+}
+
+#mini_panel .button {
+    background-color: transparent;
+    border: 0px;
+    color: #000;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    
+    display: block;
+    padding: 14px;
+}
+
+#mini_panel.visible {
+    display: block;
+    opacity: 1;
+}
+
+#mini_panel.hidden {
+    display: none;
+    opacity: 0;
+}
+
+#mini_panel a {
+    color: #888;
+}
+
+#mini_panel a:hover,
+#mini_panel .button:hover {
+    color: #556;
+    text-decoration: none;
+}
+
+/**
+ * Editor
+ */
+
+.m-editor {
+    font-size: 0px;
+}
+
+.m-editor .button {
+    background-color: #fff;
+    border: 0px;
+    color: #000;
+    cursor: pointer;
+    font-size: 14px;
+    
+    display: inline-block;
+    padding: 10px;
+}
+
+.m-editor .button:last-child {
+    margin-right: 0px;
+}
+
+.m-editor.m-dynamic {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+/**
+ * Editable stuff
+ */
+
+.m-hidden {
+    display: none;
+}
+
+.m-field {
+    background-color: transparent;
+    border: 0px;
+    
+    display: block;
+    outline: none;
+    margin-bottom: 12px;
+}
+
+.m-input-field {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.375em;
+    
+    width: 100%;
+}
+
+.m-text-field {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    
+    height: 300px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.m-anchor {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    
+    min-height: 10px;
+}
+
+.m-editing {
+    z-index: 9000;
+}
+
+/**
+ * Visibility of buttons
+ */
+
+.m-anchor .m-editor {
+    visibility: hidden;
+}
+
+.m-anchor:hover .m-editor,
+.m-editing .m-editor {
+    visibility: visible;
+}
+
+/**
+ * Overlay styles
+ */
+
+.m-overlay {
+    background-color: rgba(255, 255, 255, 0.85);
+    
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 8999;
+}

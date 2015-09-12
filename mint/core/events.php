@@ -4,7 +4,6 @@
  * Events functions
  * 
  * @package mini_framework
- * @require storage
  */
 
 /**
@@ -15,6 +14,7 @@
  */
 function events ($event, $callback = null) {
     static $stack = null;
+    
     $stack or $stack = stack();
     
     return $stack($event, $callback);

@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Hello, world!</title>
-    </head>
-    
-    <body>
-        <h1>Hello, world!</h1>
-        
-        <script src="mint/assets/js/mint.js"></script>
-    </body>
-</html>
+<?php
+
+require 'mint/bootstrap.php';
+
+layout('blog/posts', array(
+    'title' => 'Топики',
+    'posts' => db_select('SELECT * FROM posts ORDER BY date DESC')
+));

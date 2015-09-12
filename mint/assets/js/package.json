@@ -11,8 +11,8 @@
     },
     
     "devDependencies": {
-        "browserify": "*",
-        "gulp": "*",
-        "uglify-js": "*"
+        "browserify": "",
+        "gulp": "",
+        "uglify-js": ""
     }
 }

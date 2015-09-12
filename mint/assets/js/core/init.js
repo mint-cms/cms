@@ -11,6 +11,8 @@ var components = require('./components/collection'),
 module.exports = function (meta) {
     settings.assign(meta);
     
+    require('v-utils/ajax').base_url = settings.get('baseurl');
+    
     utils.toArray(dom.findAll('[data-component]'))
          .forEach(components.createComponent);
 };
