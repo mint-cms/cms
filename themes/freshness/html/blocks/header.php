@@ -2,7 +2,7 @@
         data-component="settings"
         data-group="default">
     <h1 class="title">
-        <a class="title" href="/mint/"
+        <a class="title" href="<?php echo url() ?>"
            data-name="title">
             <?php echo storage('settings.default.title') ?> 
         </a>

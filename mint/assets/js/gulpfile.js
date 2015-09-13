@@ -15,7 +15,7 @@ var bro = function () {
 /**
  * Bundle and compress likely to dist/likely.js
  */
-gulp.task('default', function () {
+gulp.task('build', function () {
     return bro().bundle(function (e, buffer) {
         var result = uglify.minify(buffer.toString(), {
             fromString: true
@@ -25,8 +25,12 @@ gulp.task('default', function () {
     });
 });
 
-gulp.task('build', function () {
+gulp.task('default', function () {
     return bro().bundle(function (e, buffer) {
         fs.writeFileSync(dist, buffer);
     });
+});
+
+gulp.task('watch', function () {
+    
 });

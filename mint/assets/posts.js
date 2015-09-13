@@ -19,7 +19,7 @@
         create: function () {
             return mint.dom.node('<label class="m-field m-url-field">' 
                 + 'Заметка будет размещена по этому адресу: '
-                + mint.ajax.url('post.php?url=')
+                + mint.ajax.url('blog')
                 + '<input class="m-input-field m-field url-field" placeholder="'
                 + this.title + '" type="text">'
                 + '</span></label>');
@@ -30,7 +30,7 @@
          */
         set: function (value) {
             this.field.querySelector('.url-field').value = value;
-            this.node.href = mint.ajax.url('post.php?url=' + value);
+            this.node.href = mint.ajax.url(['blog', value]);
         },
         
         /**

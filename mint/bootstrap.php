@@ -22,6 +22,7 @@ require 'core/snippets.php';
 require 'core/db.php';
 require 'core/db_ext.php';
 require 'core/json.php';
+require 'core/routing.php';
 require 'vendor/autoload.php';
 
 require 'models/settings.php';

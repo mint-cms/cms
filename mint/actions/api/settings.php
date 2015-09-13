@@ -1,5 +1,9 @@
 <?php
 
+function action_index ($fragments) {
+    route_action($fragments);
+}
+
 function action_save ($group = 'default') {
     $input = $_POST;
     $settings = settings_get($group);

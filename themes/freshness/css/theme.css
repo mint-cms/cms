@@ -153,17 +153,8 @@
     color: #f70066;
 }
 
-.hljs-tag,
-.hljs-tag .hljs-title {
-    color: #bf6aff;
-}
-
 .hljs-preprocessor {
     color: #1ed5f3;
-}
-
-.hljs-tag .hljs-value {
-    color: #ff9200;
 }
 
 .hljs-tag .php {

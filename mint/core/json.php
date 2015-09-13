@@ -3,11 +3,16 @@
 /**
  * json_encode alias
  * 
- * @param array $data
- * @return string
+ * @param mixed $data
+ * @return mixed
  */
-function json (array $data) {
-    return json_encode($data, JSON_UNESCAPED_UNICODE);
+function json ($data) {
+    if (is_array($data)) {
+        return json_encode($data, JSON_UNESCAPED_UNICODE);
+    }
+    else {
+        return json_decode($data, true);
+    }
 }
 
 /**

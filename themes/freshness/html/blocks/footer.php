@@ -7,7 +7,7 @@
     </p>
 </footer>
 
-<script src="themes/freshness/js/hljs.js"
+<script src="<?php echo url('themes/freshness/js/hljs.js') ?>"
         type="text/javascript"></script>
 <script type="text/javascript">
     hljs.initHighlightingOnLoad();
@@ -36,7 +36,7 @@
     
     mint.dom.on(window, 'load', function () {
         mint.init({
-            baseurl: 'mint'
+            baseurl: '<?php echo baseurl() ?>'
         });
     });
 </script>

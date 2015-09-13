@@ -4,7 +4,7 @@
      data-id="<?php echo $post['id'] ?>">
     <h1 class="title">
         <a class="title"
-           href="post.php?url=<?php echo $post['url'] ?>" 
+           href="<?php echo url("/mint/blog/{$post['url']}") ?>" 
            data-name="title">
             <?php echo $post['title'] ?>
         </a>

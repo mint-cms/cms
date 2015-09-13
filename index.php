@@ -2,7 +2,9 @@
 
 require 'mint/bootstrap.php';
 
-layout('blog/posts', array(
-    'title' => 'Топики',
-    'posts' => db_select('SELECT * FROM posts ORDER BY date DESC')
+route(array_get($_GET, 'route', 'index'), array(
+    array('/api/settings', 'mint/actions/api/settings.php'),
+    array('/api/posts'   , 'mint/actions/api/posts.php'),
+    array('/index'       , 'mint/actions/index.php'),
+    array('/blog'        , 'mint/actions/post.php')
 ));
