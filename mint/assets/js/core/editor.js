@@ -2,19 +2,19 @@ var View = require('v-mvc/view'),
     dom  = require('v-utils/dom');
 
 /** HTML template */
-var html = '<div class="m-editor m-dynamic">'
-+ '<a class="remove-button button">'
+var html = '<div class="m-panel m-editor m-dynamic">'
++ '<button class="remove-button m-button">'
 + '    <i class="fa fa-fw fa-trash"></i>'
-+ '</a>'
-+ '<a class="cancel-button button">'
++ '</button>'
++ '<button class="cancel-button m-button">'
 + '    <i class="fa fa-fw fa-times"></i>'
-+ '</a>'
-+ '<a class="edit-button button">'
++ '</button>'
++ '<button class="edit-button m-button last">'
 + '    <i class="fa fa-fw fa-pencil"></i>'
-+ '</a>'
-+ '<a class="save-button button">'
++ '</button>'
++ '<button class="save-button m-button last">'
 + '    <i class="fa fa-fw fa-hdd-o"></i>'
-+ '</a>'
++ '</button>'
 + '</div>';
 
 /**

@@ -19,25 +19,51 @@
     padding-right: 1px;
 }
 
-.m-editor .button {
+.m-button {
+    background-color: transparent;
     border: 0px;
     color: #000;
     cursor: pointer;
     font-size: 14px;
     
     display: inline-block;
-    margin-left: 16px;
-    padding: 6px;
-}
-
-.m-editor .button:last-child {
-    margin-right: 0px;
+    padding: 8px;
+    min-width: 2.5em;
 }
 
 .m-editor.m-dynamic {
     position: absolute;
     top: 0px;
     right: 0px;
+}
+
+/**
+ * Panel
+ */
+
+.m-panel {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    
+    padding: 0px;
+}
+
+.m-panel .m-button {
+    border-right: 1px solid #ddd;
+    color: #333;
+}
+
+.m-panel .m-button.last {
+    border-right: 0px;
+}
+
+#m-panel {
+    font-size: 0px;
+    
+    position: fixed;
+    top: 10px;
+    right: 10px;
 }
 
 /**

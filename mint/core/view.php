@@ -19,7 +19,7 @@ function render ($__view__, array $__data__) {
  * @param array $data
  * @param string $layout
  */
-function layout ($view, array $data, $layout = 'layouts/default') {
+function layout ($view, array $data = array(), $layout = 'layouts/default') {
     $data['view'] = $view;
     
     view($layout, $data);
@@ -31,7 +31,7 @@ function layout ($view, array $data, $layout = 'layouts/default') {
  * @param string $view
  * @param array $data
  */
-function view ($view, $data) {
+function view ($view, $data = array()) {
     render(view_path($view), $data);
 }
 
