@@ -42,7 +42,7 @@ module.exports = View.extend({
     initiateForm: function (nodes) {
         var self = this;
         
-        this.form = dom.node('<div class="m-hidden"></div>');
+        this.form = dom.node('<div class="m-form m-hidden"></div>');
         
         utils.each(nodes, function (field) {
             self.form.appendChild(field.field);

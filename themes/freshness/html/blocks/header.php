@@ -1,14 +1,15 @@
 <header id="header"
         data-component="settings"
         data-group="default">
-    <h1>
-        <a href="/mint/"
-           data-name="sitename">
-            volter9
+    <h1 class="title">
+        <a class="title" href="/mint/"
+           data-name="title">
+            <?php echo storage('settings.default.title') ?> 
         </a>
     </h1>
     
-    <p data-name="sitedescription">
-        Hello, there!
+    <p class="description"
+       data-name="description">
+        <?php echo storage('settings.default.description') ?> 
     </p>
 </header>

@@ -3,7 +3,7 @@
 function action_get ($id) {
     $item = db_find('posts', $id);
     
-    json_result(true, $item);
+    json_result(true, compact('item'));
 }
 
 function action_add () {

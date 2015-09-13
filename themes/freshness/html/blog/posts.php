@@ -1,11 +1,14 @@
+<!-- 
 <button id="add_post">
     Добавить пост
 </button>
+ -->
 <article class="posts">
 <?php foreach ($posts as $post) {
     snippet('blog/snippet', $post);
 } ?> 
 </article>
+<!-- 
 <script type="text/javascript">
     mint.posts.collection.bootstrap(<?php echo json($posts) ?>);
     
@@ -25,8 +28,6 @@
                 
                 mint.components.createComponent(div);
                 
-                console.dir(div);
-                
                 dest.insertBefore(div, dest.children[0]);
                 
                 div.component.post.merge(data.data);
@@ -35,3 +36,4 @@
             .send();
     });
 </script>
+ -->

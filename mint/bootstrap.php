@@ -3,6 +3,16 @@
 define('MINT_BASEPATH', dirname(__DIR__));
 define('MINT_VERSION',  '0.1.0');
 
+/**
+ * Basepath shortcut
+ * 
+ * @param string $file
+ * @return string
+ */
+function basepath ($file = '') {
+    return MINT_BASEPATH . "/$file";
+}
+
 require 'core/array.php';
 require 'core/string.php';
 require 'core/storage.php';

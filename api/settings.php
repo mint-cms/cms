@@ -15,9 +15,7 @@ function action_save ($group = 'default') {
         }
     }
     
-    $result = settings_save($group, $input);
-    
-    json_result($result);
+    json_result(settings_save($group, $input));
 }
 
 function action_get ($group = 'default') {

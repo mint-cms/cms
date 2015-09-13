@@ -5,9 +5,9 @@
     </head>
     
     <body>
-        <?php view('blocks/header', $__data__) ?> 
-        
         <div id="wrapper">
+        <?php view('blocks/header', $__data__) ?>     
+        
         <?php view($view, $__data__) ?> 
         
         <?php view('blocks/footer', $__data__) ?> 

@@ -4,58 +4,8 @@
  * Admin panels styles
  * 
  * @author volter9
- * @package mini_blog
+ * @package mint
  */
-
-#mini_panel {
-    background-color: #fff;
-    
-    position: fixed;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    z-index: 9002;
-    width: 3em;
-}
-
-#mini_panel ul {
-    list-style: none;
-    
-    margin: 0px;
-    padding: 0px;
-}
-
-#mini_panel .button {
-    background-color: transparent;
-    border: 0px;
-    color: #000;
-    cursor: pointer;
-    font-size: 14px;
-    text-align: center;
-    
-    display: block;
-    padding: 14px;
-}
-
-#mini_panel.visible {
-    display: block;
-    opacity: 1;
-}
-
-#mini_panel.hidden {
-    display: none;
-    opacity: 0;
-}
-
-#mini_panel a {
-    color: #888;
-}
-
-#mini_panel a:hover,
-#mini_panel .button:hover {
-    color: #556;
-    text-decoration: none;
-}
 
 /**
  * Editor
@@ -63,17 +13,21 @@
 
 .m-editor {
     font-size: 0px;
+    z-index: 10;
+    
+    padding-top: 1px;
+    padding-right: 1px;
 }
 
 .m-editor .button {
-    background-color: #fff;
     border: 0px;
     color: #000;
     cursor: pointer;
     font-size: 14px;
     
     display: inline-block;
-    padding: 10px;
+    margin-left: 16px;
+    padding: 6px;
 }
 
 .m-editor .button:last-child {
@@ -94,17 +48,19 @@
     display: none;
 }
 
-.m-field {
+.m-anchor .m-field {
     background-color: transparent;
     border: 0px;
+    box-sizing: border-box;
+    outline: none;
+    text-align: left;
     
     display: block;
-    outline: none;
     margin-bottom: 12px;
 }
 
 .m-input-field {
-    font-family: sans-serif;
+    font-family: inherit;
     font-size: 16px;
     line-height: 1.375em;
     
@@ -112,7 +68,7 @@
 }
 
 .m-text-field {
-    font-family: sans-serif;
+    font-family: inherit;
     font-size: 16px;
     line-height: 1.5em;
     
@@ -126,7 +82,7 @@
     left: 0px;
     top: 0px;
     
-    min-height: 10px;
+    min-height: 34px;
 }
 
 .m-editing {
