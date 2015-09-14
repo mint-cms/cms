@@ -15,5 +15,9 @@
       type="text/css">
 
 <script src="<?php echo url('mint/assets/js/mint.js') ?>" type="text/javascript"></script>
+<?php if (is_admin()): ?> 
 <script src="<?php echo url('mint/assets/settings.js') ?>" type="text/javascript"></script>
 <script src="<?php echo url('mint/assets/posts.js') ?>" type="text/javascript"></script>
+<?php else: ?> 
+<script src="<?php echo url('mint/assets/form.js') ?>" type="text/javascript"></script>
+<?php endif; ?> 

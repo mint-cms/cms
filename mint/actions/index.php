@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Show the recent posts
+ */
 function action_index () {
     layout('blog/posts', array(
         'title' => 'Топики',

@@ -1,0 +1,1 @@
+zip -r mint.zip ./ -x *.git*\* *.DS_Store\* *node_modules\* *test\*

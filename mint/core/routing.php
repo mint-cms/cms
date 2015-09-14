@@ -32,6 +32,11 @@ function route_action (array $fragments) {
     call_user_func_array("action_$fragments[0]", array_slice($fragments, 1));
 }
 
+/**
+ * Get base URL
+ * 
+ * @return string
+ */
 function baseurl () {
     $base   = trim(MINT_BASEPATH, '/');
     $root   = trim($_SERVER['DOCUMENT_ROOT'], '/');
@@ -40,10 +45,46 @@ function baseurl () {
     return $base === $root ? '' : trim(substr($base, $lenght), '/');
 }
 
-function url ($file = '') {
+/**
+ * Get requested URL
+ * 
+ * @return string
+ */
+function get_url () {
+    $root = baseurl();
+    
+    $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $url = trim($url, '/');
+    
+    if ($root && strpos($url, $root) === 0) {
+        $url = substr($url, strlen($root));
+        $url = trim($url, '/');
+    }
+    
+    return $url;
+}
+
+/**
+ * Construct URL
+ * 
+ * @param string $file
+ * @return string
+ */
+function url ($url = '') {
     static $baseurl = null;
     
     $baseurl or $baseurl = baseurl();
     
-    return deduplicate("/$baseurl/$file", '/');
+    return deduplicate("/$baseurl/$url", '/');
+}
+
+/**
+ * Redirect
+ * 
+ * @param string $url
+ */
+function redirect ($url = '') {
+    $url = url($url);
+    
+    header("Location: $url") xor exit;
 }

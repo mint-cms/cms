@@ -1,7 +1,10 @@
 <?php
 
+/**
+ * Get a post by URL
+ */
 function action_index ($fragments) {
-    $url = $fragments[0];
+    $url = array_get($fragments, 0, '');
     
     layout('blog/post', array(
         'title' => 'Один топик',

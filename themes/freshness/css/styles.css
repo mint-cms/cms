@@ -197,6 +197,10 @@ article.error ul li {
     margin-bottom: 2em;
 }
 
+.posts .empty {
+    margin-bottom: 1em;
+}
+
 .post {
     margin-bottom: 2em;
 }
@@ -262,7 +266,7 @@ article.error ul li {
 .post p {
     color: #000;
     font-size: 16px;
-    line-height: 1.375em;
+    line-height: 1.45em;
 }
 
 .post .info {

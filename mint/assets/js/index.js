@@ -14,6 +14,7 @@ var mint = {
     components: require('./core/components/collection'),
     component:  require('./core/components/component'),
     settings:   require('./core/settings'),
+    overlay:    require('./core/overlay'),
     editor:     require('./core/editor'),
     fields:     require('./core/fields'),
     field:      require('./core/fields/field'),

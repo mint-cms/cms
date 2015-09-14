@@ -9,7 +9,7 @@
     <a class="m-button">
         <i class="fa fa-cogs"></i>
     </a>
-    <a href="signout.php" class="m-button last">
+    <a href="<?php echo url('api/auth/logout') ?>" class="m-button last">
         <i class="fa fa-sign-out"></i>
     </a>
 </div>

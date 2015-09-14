@@ -5,7 +5,7 @@
     </head>
     
     <body>
-        <?php view(basepath('mint/core/panel')) ?> 
+        <?php is_admin() and view(basepath('mint/core/panel')) ?> 
         
         <div id="wrapper">
         <?php view('blocks/header', $__data__) ?>     

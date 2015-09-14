@@ -19,7 +19,7 @@
         create: function () {
             return mint.dom.node('<label class="m-field m-url-field">' 
                 + 'Заметка будет размещена по этому адресу: '
-                + mint.ajax.url('blog')
+                + mint.ajax.url('blog/')
                 + '<input class="m-input-field m-field url-field" placeholder="'
                 + this.title + '" type="text">'
                 + '</span></label>');

@@ -148,3 +148,83 @@
     right: 0px;
     z-index: 8999;
 }
+
+.m-overlay.m-dark {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/**
+ * Login form
+ */
+
+.m-login {
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+    font-size: 14px;
+    opacity: 0.2;
+    
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    
+    padding: 8px;
+}
+
+.m-login:hover {
+    opacity: 0.5
+}
+
+.m-login-form {
+    background-color: #fff;
+    border-radius: 8px;
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9001;
+    
+    height: 220px;
+    margin-top: -110px;
+    margin-left: -230px;
+    padding-top: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 460px;
+}
+
+.m-login-form h2 {
+    font-size: 20px;
+}
+
+.m-login-password {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    
+    margin-top: 8px;
+    padding: 8px;
+    width: 100%;
+}
+
+.m-login-password:focus {
+    border: 1px solid #0af;
+}
+
+.m-login-submit {
+    background-color: #26f;
+    border-radius: 4px;
+    border: 0px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    
+    margin-top: 12px;
+    padding: 8px 16px;
+}
+
+.m-login-submit:hover {
+    background-color: #06e;
+}

@@ -3,7 +3,7 @@
         data-group="default">
     <p class="copyright" 
        data-name="copyright">
-        Copyright &copy; 2015+
+        <?php echo storage('settings.default.copyright') ?> 
     </p>
 </footer>
 
@@ -11,6 +11,7 @@
         type="text/javascript"></script>
 <script type="text/javascript">
     hljs.initHighlightingOnLoad();
+    <?php if (is_admin()): ?> 
     
     mint.posts.view.prototype.render = function () {
         mint.component.view.prototype.render.call(this);
@@ -19,18 +20,7 @@
              .forEach(hljs.highlightBlock);
     };
     
-    mint.lang({
-        settings: {
-            sitename: 'Website name',
-            sitedescription: 'Website description',
-            copyright: 'Copyright'
-        },
-        posts: {
-            title: 'Title',
-            text: 'Content',
-            url: 'URL slug'
-        }
-    });
+    mint.lang(<?php echo json(lang()) ?>);
     
     mint.settings.collection.bootstrap(<?php echo json(storage('settings')) ?>);
     
@@ -39,4 +29,5 @@
             baseurl: '<?php echo baseurl() ?>'
         });
     });
+    <?php endif; ?> 
 </script>
