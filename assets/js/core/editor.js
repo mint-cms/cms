@@ -1,5 +1,6 @@
-var View = require('v-mvc/view'),
-    dom  = require('v-utils/dom');
+var View    = require('v-mvc/view'),
+    dom     = require('v-utils/dom'),
+    overlay = require('./overlay');
 
 /** HTML template */
 var html = '<div class="m-panel m-editor m-dynamic">'
@@ -58,6 +59,8 @@ var Editor = View.extend({
         
         Editor.editing = false;
         
+        overlay.hide();
+        
         this.show(true);
     },
     
@@ -68,6 +71,8 @@ var Editor = View.extend({
         if (Editor.editing) return;
         
         Editor.editing = true
+        
+        overlay.show();
         
         this.data.component.enable();
         this.show(false);

@@ -86,7 +86,7 @@ a:hover {
 
 #header .title {
     font-family: sans-serif;
-    font-size: 40px;
+    font-size: 48px;
     font-weight: 100;
     text-align: center;
 }
@@ -422,9 +422,10 @@ article.error ul li {
     
     box-sizing: border-box;
     padding-bottom: 40px;
+    padding-top: 10px;
 }
 
 #footer .copyright {
     color: #888;
-    font-size: 14px
+    font-size: 14px;
 }

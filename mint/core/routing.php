@@ -7,6 +7,7 @@
  * @param array $routes
  */
 function route ($url, array $routes) {
+    $url = $url ? $url : 'index';
     $url = trim($url, '/');
     $url = "/$url";
     

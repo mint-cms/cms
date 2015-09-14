@@ -1,6 +1,5 @@
-var utils   = require('v-utils/utils'),
-    extend  = require('v-utils/extend'),
-    overlay = require('../overlay');
+var utils  = require('v-utils/utils'),
+    extend = require('v-utils/extend');
 
 /**
  * Component
@@ -22,8 +21,6 @@ Component.prototype = {
      * Enable component for modification
      */
     enable: function () {
-        overlay.show();
-    
         this.view.activate();
     },
 
@@ -31,8 +28,6 @@ Component.prototype = {
      * Disable component for modification
      */
     disable: function () {
-        overlay.hide();
-    
         this.view.deactivate();
     },
 

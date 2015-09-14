@@ -13,5 +13,11 @@
     <div data-name="text">
     <?php echo markdown($post['text']) ?> 
     </div>
+    
+    <ul class="info">
+        <li>
+            <?php echo $post['date'] ?>
+        </li>
+    </ul>
 </div>
 <?php } ?>

@@ -15,4 +15,19 @@ module.exports = function (meta) {
     
     utils.toArray(dom.findAll('[data-component]'))
          .forEach(components.createComponent);
+    
+    var cancel = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    
+    dom.on(document.body, 'dragover', function (e) {
+        cancel(e);
+        
+        e.dataTransfer.dropEffect = 'copy';
+    });
+    
+    dom.on(document.body, 'drop', function (e) {
+        cancel(e);
+    });
 };

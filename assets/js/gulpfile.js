@@ -30,7 +30,3 @@ gulp.task('default', function () {
         fs.writeFileSync(dist, buffer);
     });
 });
-
-gulp.task('watch', function () {
-    
-});

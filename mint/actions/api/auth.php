@@ -10,14 +10,15 @@ function action_login () {
         return;
     }
     
+    $user     = require basepath('mint/config/user.php');
     $password = array_get($_POST, 'password', '');
     
-    if (md5($password) !== md5('123456')) {
+    if (md5($password) !== md5($user['password'])) {
         return json_result(false, array(), 'Неверный пароль');
     }
     
-    json_result(true);
     session('user_id', 1);
+    json_result(true);
 }
 
 /** Log out */

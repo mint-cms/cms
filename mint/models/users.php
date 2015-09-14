@@ -19,10 +19,8 @@ function users ($key = null, $value = null) {
  * Init users
  */
 function users_init () {
-    $user = user_by_id((int)session('user_id'));
-    
-    if ($user) {
-        users('user', $user);
+    if (session('user_id')) {
+        users('user', require basepath('mint/config/user.php'));
         users('authorized', true);
     }
     else {

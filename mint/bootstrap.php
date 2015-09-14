@@ -1,8 +1,5 @@
 <?php
 
-define('MINT_BASEPATH', dirname(__DIR__));
-define('MINT_VERSION',  '0.1.0');
-
 require 'core/db.php';
 require 'core/lang.php';
 require 'core/view.php';
