@@ -4,6 +4,7 @@ define('MINT_BASEPATH', __DIR__);
 define('MINT_VERSION',  '0.1.0');
 
 require 'mint/bootstrap.php';
+require 'themes/freshness/functions.php';
 
 route(get_url(), array(
     array('/api/settings', 'mint/actions/api/settings.php'),
