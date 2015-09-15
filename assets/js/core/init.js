@@ -9,9 +9,7 @@ var components = require('./components/collection'),
  * @param {Object} meta - settings
  */
 module.exports = function (meta) {
-    settings.assign(meta);
-    
-    require('v-utils/ajax').base_url = settings.get('baseurl');
+    settings.assign(meta || {});
     
     utils.toArray(dom.findAll('[data-component]'))
          .forEach(components.createComponent);

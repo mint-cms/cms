@@ -11,8 +11,10 @@
         type="text/javascript"></script>
 <script type="text/javascript">
     hljs.initHighlightingOnLoad();
-    <?php if (is_admin()): ?> 
     
+    mint.ajax.base_url = '<?php echo baseurl() ?>';
+    
+    <?php if (is_admin()): ?> 
     mint.posts.view.prototype.render = function () {
         mint.component.view.prototype.render.call(this);
         
@@ -25,9 +27,7 @@
     mint.settings.collection.bootstrap(<?php echo json(storage('settings')) ?>);
     
     mint.dom.on(window, 'load', function () {
-        mint.init({
-            baseurl: '<?php echo baseurl() ?>'
-        });
+        mint.init();
     });
     <?php endif; ?> 
 </script>

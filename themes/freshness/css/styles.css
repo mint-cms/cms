@@ -4,6 +4,7 @@
  */
 
 * {
+    ‑webkit‑text‑size‑adjust: 100%;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
@@ -424,4 +425,20 @@ article.error ul li {
 #footer .copyright {
     color: #888;
     font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    #wrapper {
+        max-width: 90%;
+        width: 90%;
+    }
+    
+    #wrapper .m-editor {
+        visibility: visible;
+    }
+    
+    #m-panel {
+        left: 10px;
+        right: inherit;
+    }
 }

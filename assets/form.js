@@ -57,7 +57,7 @@ mint.dom.on(window, 'load', function () {
             this.bind('.m-form', 'submit', function (e) {
                 e.preventDefault();
                 
-                mint.ajax.post('mint/api/auth/login', {
+                mint.ajax.post('api/auth/login', {
                         password: self.find('.m-login-password').value
                     })
                     .success(function () {
