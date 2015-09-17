@@ -19,11 +19,6 @@ table {
     border-spacing: 0;
 }
 
-ul, 
-ol {
-    list-style: none;
-}
-
 img {
     max-width: 100%;
 }
@@ -34,7 +29,7 @@ img {
 
 html,
 body {
-    font-family: sans-serif;
+    font-family: Arial;
     margin: 0px;
     padding: 0px;
 }
@@ -72,8 +67,8 @@ a:hover {
 
 #wrapper {
     margin: 0px auto;
-    max-width: 600px;
-    width: 60%;
+    max-width: 1000px;
+    width: 80%;
 }
 
 /**
@@ -87,7 +82,6 @@ a:hover {
 
 #header .title {
     color: #999;
-    font-family: Lato;
     font-size: 16px;
     font-weight: bold;
     line-height: 1.2em;
@@ -210,17 +204,8 @@ article.error ul li {
 
 .post .title {
     font-size: 36px;
-    font-weight: normal;
     
     margin-top: 0px;
-}
-
-.post .title a {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.post .title a:hover {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 .post abbr {
@@ -234,12 +219,11 @@ article.error ul li {
 .post h5,
 .post h6 {
     color: #000;
-    font-family: Lato;
-    font-size: 20px;
-    font-weight: normal;
+    font-size: 16px;
+    font-weight: bold;
     
     margin-top: 1.5em;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
 }
 
 .post h1 a,
@@ -270,7 +254,7 @@ article.error ul li {
 
 .post p {
     color: #000;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.45em;
 }
 
@@ -286,7 +270,7 @@ article.error ul li {
 .post ul ol,
 .post ol ol,
 .post ol ul {
-    margin-top: 0.25em;
+    margin-top: 0.5em;
 }
 
 .post p:last-child,
@@ -297,8 +281,6 @@ article.error ul li {
 
 .post ul,
 .post ol {
-    list-style-type: none;
-    
     padding-left: 1.25em;
 }
 
@@ -317,8 +299,9 @@ article.error ul li {
 }
 
 .post blockquote {
+    border-left: 2px solid #aaa;
     color: #666;
-    line-height: 1.375em;
+    line-height: 1.45em;
     font-size: 14px;
     
     padding: 2px 1.25em;
@@ -329,7 +312,7 @@ article.error ul li {
     color: #666;
     font-size: 14px;
     
-    margin-bottom: 0.25em;
+    margin-bottom: 0.5em;
     padding: 0px 0px;
 }
 
@@ -365,6 +348,7 @@ article.error ul li {
     font-size: 12px;
     
     margin: 0px;
+    margin-top: 1em;
 }
 
 .post .centered {
@@ -388,24 +372,15 @@ article.error ul li {
 }
 
 .post .url-field {
-    font-size: 14px;
+    background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 2px;
-    
+    font-size: 14px;
     
     display: inline-block;
     margin-left: 2px;
     padding: 1px 3px;
     width: auto;
-}
-
-.full-post .title {
-    font-size: 48px;
-}
-
-.full-post .title a,
-.full-post .title a:hover {
-    border: 0px;
 }
 
 /**
@@ -428,6 +403,10 @@ article.error ul li {
 }
 
 @media (max-width: 700px) {
+    body {
+        padding-top: 41px;
+    }
+    
     #wrapper {
         max-width: 90%;
         width: 90%;
@@ -438,7 +417,17 @@ article.error ul li {
     }
     
     #m-panel {
-        left: 10px;
-        right: inherit;
+        border-radius: 0px;
+        border: 0px;
+        border-bottom: 1px solid #f8f8f8;
+        
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+    }
+    
+    #m-panel .m-button {
+        padding: 12px;
     }
 }

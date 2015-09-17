@@ -44,7 +44,6 @@ mint.dom.on(window, 'load', function () {
             this.node = dom.node(
                 '<div class="m-login-form m-hidden">'
               + '<form action="" class="m-form"><h2>Пароль'
-              + '<span class="m-status"></span>'
               + '</h2>'
               + '<input class="m-login-password" type="password">'
               + '<button class="m-login-submit">Войти</button>'
@@ -64,7 +63,9 @@ mint.dom.on(window, 'load', function () {
                         location.reload();
                     })
                     .error(function (_, message) {
-                        self.find('.m-status').innerHTML = message;
+                        self.node.classList.remove('m-shaking');
+                        self.node.offsetWidth = self.node.offsetWidth;
+                        self.node.classList.add('m-shaking');
                     })
                     .send();
             });

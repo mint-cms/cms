@@ -6,6 +6,8 @@ var overlay = {
     
     /**
      * Show overlay
+     * 
+     * @param {Boolean} dark
      */
     show: function (dark) {
         if (this.element === null) {
